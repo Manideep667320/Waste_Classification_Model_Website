@@ -6,7 +6,7 @@ from PIL import Image
 import io
 
 # Load the trained model
-model = load_model('Waste_Model.keras')
+model = load_model('Waste_Model.h5')
 
 # Initialize the Flask application
 app = Flask(__name__)

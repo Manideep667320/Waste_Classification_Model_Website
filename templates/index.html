@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSort AI - Waste Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#features">Features</a>
+                <a class="nav-link" href="#upload">Upload</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center py-5">
+        <h1>EcoSort AI 🌍♻️</h1>
+        <p>Upload an image and let our AI classify whether the waste is recyclable or organic.</p>
+        <button class="learn-more" onclick="location.href='#upload'">
+            <span class="circle">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Get Started</span>
+        </button>
+
+    </header>
+
+    <!-- About Section -->
+    <div id="about" class="container mt-5">
+        <h2>About Our AI Model</h2>
+        <p>EcoSort AI makes waste sorting easy and smart! Our AI-powered system quickly analyzes images of waste and tells you if an item is Recyclable or Organic. Just upload a photo, and our technology will guide you toward proper disposal, helping to keep the planet clean.
+
+            By sorting waste correctly, we can reduce pollution, save resources, and protect the environment. Join us in making waste management smarter and greener! 🌱✨</p>
+        <p>Our AI model uses advanced deep learning techniques to classify waste accurately. It is trained on thousands of images and can adapt to real-world challenges.</p>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="container mt-5">
+        <h2>Features</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card feature-box">
+                    <div class="icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="heading">Advanced AI</h3>
+                    <p>Utilizes state-of-the-art deep learning algorithms.</p>
+                    <p>High performance and accuracy.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-box">
+                    <div class="icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3 class="heading">High Accuracy</h3>
+                    <p>Trained on thousands of images for precise classification.</p>
+                    <p>Reliable and consistent results.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-box">
+                    <div class="icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="heading">Eco-Friendly</h3>
+                    <p>Helps in promoting recycling and waste management.</p>
+                    <p>Contributes to a sustainable future.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Section -->
+    <div id="upload" class="container mt-5">
+        <h2>Upload an Image</h2>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload an image:</label>
+                <input type="file" class="form-control-file" id="file" name="file" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Classify</button>
+        </form>
+        <div class="image-preview mt-3">
+            <h5>Image Preview:</h5>
+            <img id="imagePreview" src="#" alt="Image Preview" style="display:none; max-width: 100%;"/>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container mt-5">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us at <a href="manideepmasna1@gmail.com">manideepmasna1@gmail.com</a>.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center py-3 bg-dark text-white">
+        <p>Created by Masna Manideep | Powered by AI</p>
+        <div class="wrapper">
+            <a href="https://linkedin.com" class="icon linkedin">
+                <div class="tooltip">Linkedin</div>
+                <span><i class="fab fa-linkedin"></i></span>
+            </a>
+            <a href="https://github.com" class="icon github">
+                <div class="tooltip">GitHub</div>
+                <span><i class="fab fa-github"></i></span>
+            </a>
+            <a href="https://instagram.com" class="icon instagram">
+                <div class="tooltip">Instagram</div>
+                <span><i class="fab fa-instagram"></i></span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('file').onchange = function (event) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                const img = document.getElementById('imagePreview');
+                img.src = reader.result; // Set the src to the base64 string
+                img.style.display = 'block';
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Flask
+Pillow
+numpy
+tensorflow
+opencv-python
+pandas
+matplotlib
+tqdm

@@ -14,6 +14,7 @@ Frontend: HTML, CSS, JavaScript
 Backend: Python (Flask)
 AI Model: TensorFlow/Keras CNN Model
 
+
 📂 Project Directory Structure
 waste_classification_website/
 ├── app.py                   # Flask backend for handling requests
@@ -26,6 +27,8 @@ waste_classification_website/
 └── static/                  # Static files (CSS, uploads)
     ├── styles.css           # Stylesheet for UI
     └── uploads/             # Directory for storing uploaded images
+
+
     
 📸 How It Works
 Upload an image of a waste item on the homepage.

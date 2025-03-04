@@ -102,7 +102,7 @@ if __name__ == "__main__":
     logging.info(f"Validation loss: {hist.history['val_loss'][-1]}")
 
     # Save the trained model
-    model.save("Waste_Model.keras")
+    model.save("Waste_Model.h5")
 
     # Plot training history
     plt.figure(figsize=[10, 6])

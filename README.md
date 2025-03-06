@@ -19,14 +19,23 @@ AI Model: TensorFlow/Keras CNN Model
 waste_classification_website/
 
 ├── app.py                   # Flask backend for handling requests
+
 ├── model.py                 # Waste Classification model building
+
 ├── requirements.txt         # Dependencies for the project
+
 ├── Waste_Model.h5           # Pre-trained AI model for waste classification
+
 ├── templates/               # HTML templates for frontend
+
 │   ├── index.html           # Homepage with image upload feature
+
 │   └── result.html          # Displays classification results
+
 └── static/                  # Static files (CSS, uploads)
+
     ├── styles.css           # Stylesheet for UI
+    
     └── uploads/             # Directory for storing uploaded images
 
 

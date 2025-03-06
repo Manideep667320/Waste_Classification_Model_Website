@@ -27,10 +27,8 @@ waste_classification_website/
 ├── Waste_Model.h5           # Pre-trained AI model for waste classification
 
 ├── templates/               # HTML templates for frontend
-
-   ├── index.html           # Homepage with image upload feature
-
-   └── result.html          # Displays classification results
+    ├── index.html           # Homepage with image upload feature
+    └── result.html          # Displays classification results
 
 └── static/                  # Static files (CSS, uploads)
     ├── styles.css           # Stylesheet for UI

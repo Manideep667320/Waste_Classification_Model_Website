@@ -28,14 +28,12 @@ waste_classification_website/
 
 ├── templates/               # HTML templates for frontend
 
-│   ├── index.html           # Homepage with image upload feature
+   ├── index.html           # Homepage with image upload feature
 
-│   └── result.html          # Displays classification results
+   └── result.html          # Displays classification results
 
 └── static/                  # Static files (CSS, uploads)
-
     ├── styles.css           # Stylesheet for UI
-    
     └── uploads/             # Directory for storing uploaded images
 
 

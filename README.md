@@ -17,6 +17,7 @@ AI Model: TensorFlow/Keras CNN Model
 
 📂 Project Directory Structure
 waste_classification_website/
+
 ├── app.py                   # Flask backend for handling requests
 ├── model.py                 # Waste Classification model building
 ├── requirements.txt         # Dependencies for the project
